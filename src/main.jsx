@@ -1,11 +1,10 @@
 import { MantineProvider } from '@mantine/core';
 import { ModalsProvider } from '@mantine/modals';
-import { NotificationsProvider } from '@mantine/notifications';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import "./config";
 import { mantineTheme } from './config';
-import "./config"
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,11 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 		<MantineProvider
 			theme={mantineTheme}
 		>
-			<NotificationsProvider>
-				<ModalsProvider>
-					<App />
-				</ModalsProvider>
-			</NotificationsProvider>
+			<ModalsProvider>
+				<App />
+			</ModalsProvider>
 		</MantineProvider>
 	</React.StrictMode>
 )
