@@ -5,19 +5,18 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export default function HomeView() {
-	
+export default function CaminoView() {
 	const navigate = useNavigate();
-	const [form, setForm] = useState({user: "", password: ""})
+	const [form, setForm] = useState({coords: ""})
 	const [error, setError] = useState("");
 	
 	
 	const handleClick = () => {
 		
-		if (form.user === "rosamara" && form.password === "montonesdecamiones") {
-			navigate("/camino");
+		if (form.coords === "39.87328, 25.05741") {
+			navigate("/caminante");
 		} else {
-			setError("Usuario o contraseña incorrectos");
+			setError("Coordenadas inválidas");
 		}
 		
 	};
@@ -29,25 +28,18 @@ export default function HomeView() {
 		>
 			<Center>
 				<Stack>
-					<Title align="center" color="blue">Acceso</Title>
+					<Title align="center" color="blue">Capítulo 2: el camino</Title>
 					
 					<TextInput
-						label="Usuario"
-						placeholder="Tu usuario"
+						label="Coordenadas"
+						placeholder="Latitud y longitud"
 						onChange={(e) => {
-							setForm({...form, user: e.target.value})
-							setError("")
-						}}
-					/>
-					<PasswordInput
-						label="Contraseña"
-						placeholder="Tu contraseña"
-						onChange={(e) => {
-							setForm({...form, password: e.target.value})
+							setForm({...form, coords: e.target.value})
 							setError("")
 						}}
 						error={error}
 					/>
+					
 					<Button
 						onClick={handleClick}
 					>

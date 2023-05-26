@@ -1,15 +1,12 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
 import GlobalLayout from "./layouts/GlobalLayout/GlobalLayout";
 
-// import Guard from "./Guard";
-
-
 
 const HomeView = lazy( () => import("@/pages/Home/HomeView"));
-const ReservationView = lazy( () => import("@/pages/Reservation/ReservationView"));
-const Agenda = lazy( () => import("@/pages/Agenda/Agenda"));
-
+const CaminoView = lazy( () => import("@/pages/Camino/CaminoView"));
+const CaminanteView = lazy( () => import("@/pages/Caminante/CaminanteView"));
+const CrisolView = lazy( () => import("@/pages/Crisol/CrisolView"));
 
 
 export default function RoutesGroup() {
@@ -22,8 +19,16 @@ export default function RoutesGroup() {
 			/>
 			
 			<Route
-				path="/reservation" exact
-				element={<ReservationView />}
+				path="/camino" exact
+				element={<CaminoView />}
+			/>
+			<Route
+				path="/caminante" exact
+				element={<CaminanteView />}
+			/>
+			<Route
+				path="/crisol" exact
+				element={<CrisolView />}
 			/>
 			
 			
@@ -35,10 +40,10 @@ export default function RoutesGroup() {
 				}
 			>
 				
-				<Route
+				{/* <Route
 					path="/agenda" exact
 					element={<Agenda />}
-				/>
+				/> */}
 				
 			</Route>
 			

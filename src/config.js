@@ -49,9 +49,9 @@ export const mantineTheme = {
 		"economos": ["#E9FCF6","#C1F6E5","#99F0D5","#70EAC4","#48E5B3","#20DFA3","#1AB282","#138662","#0D5941","#062D21"],
 	},
 	
-	primaryColor: "economos",
+	primaryColor: "teal",
 	// colorScheme: "dark",
-	fontFamily: "Asap, sans-serif",
+	fontFamily: "DM Sans, sans-serif",
 	
 	datesLocale: "es-ES",
 	dateFormat: "DD/MM/YYYY",
