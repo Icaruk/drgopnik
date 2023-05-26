@@ -7,7 +7,7 @@ const path = require('path');
 // https://vitejs.dev/config/
 export default defineConfig({
 	server: {
-		port: 3000,
+		port: 9876,
 	},
 	// base: "/drgopnik/",
 	resolve: {
